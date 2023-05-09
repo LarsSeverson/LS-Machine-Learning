@@ -75,7 +75,7 @@ print()
 for x in range(len(predictions)):
     print('Prediction: ', predictions[x], 'Data: ',x_test[x], 'Target: ', y_test[x])
 
-p = 'absences'
+p = 'G1'
 style.use('ggplot')
 pyplot.scatter(data[p], data['G3'])
 pyplot.xlabel(p)
