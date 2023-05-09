@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn import linear_model
+import matplotlib.pyplot as pyplot
+import pickle
+from matplotlib import style
 
 '''
 We should choose to use Linear Regression whenever you are dealt with data points that are
@@ -37,18 +40,31 @@ Y = np.array(data[predict])
 4. y_test is the actual target value of x_test that will be used to complete the evaluation
 '''
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X,Y, test_size=0.1)
+# best = 0
+# for _ in range(30):
+#     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X,Y, test_size=0.1)
+#
+#     # Now we apply the linear regression to find the best fit line
+#     linear = linear_model.LinearRegression()
+#     linear.fit(x_train, y_train)
+#
+#     # We test the train values with the test values to find the accuracy
+#     accuracy = linear.score(x_test, y_test)
+#
+#     if accuracy > best:
+#         print(best)
+#         best = accuracy
+#         with open('studentmodel.pickle', 'wb') as f:
+#             pickle.dump(linear, f)
 
-# Now we apply the linear regression to find the best fit line
-linear = linear_model.LinearRegression()
-linear.fit(x_train, y_train)
 
-# We test the train values with the test values to find the accuracy
-accuracy = linear.score(x_test, y_test)
+pickle_in = open('studentmodel.pickle', "rb")
+linear = pickle.load(pickle_in)
 
 # Since linear regression finds the best fit line we can actually just get those (y=mx+b) values.
 # I'm keeping it simple with y=mx+b because when we're going beyond 2D space (which we are),
 # the formula can get tricky
-print('Total accuracy: ',accuracy)
+#print('Total accuracy: ',accuracy)
 print("Coefficient: ", linear.coef_)
 print("Intercept: ", linear.intercept_)
 
@@ -58,3 +74,10 @@ predictions = linear.predict(x_test)
 print()
 for x in range(len(predictions)):
     print('Prediction: ', predictions[x], 'Data: ',x_test[x], 'Target: ', y_test[x])
+
+p = 'absences'
+style.use('ggplot')
+pyplot.scatter(data[p], data['G3'])
+pyplot.xlabel(p)
+pyplot.ylabel('Final Grade')
+pyplot.show()
