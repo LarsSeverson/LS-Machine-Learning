@@ -11,10 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2PXWsKplt58kcvqulFUuCZYFAPX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,7 +23,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -94,7 +91,9 @@
       <updated>1683604111944</updated>
       <workItem from="1683604117239" duration="5577000" />
       <workItem from="1683609781878" duration="155000" />
-      <workItem from="1683610719453" duration="10000" />
+      <workItem from="1683610234047" duration="454000" />
+      <workItem from="1683611611483" duration="33000" />
+      <workItem from="1683611703554" duration="15000" />
     </task>
     <servers />
   </component>
